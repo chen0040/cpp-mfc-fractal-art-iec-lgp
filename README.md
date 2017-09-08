@@ -14,6 +14,12 @@ The fractal arts they create can also be exported as image.
 
 The project was written using MFC in VS 2005 with SDL 1.2 and Allegro. There is an embedded compiler than automatically converts the generated linear genetic program into executable.
 
-The binary executable built from the project can be found in the 
+The binary executable built from the project can be found in the [GeneticArt.zip](GeneticArt.zip)
+
+The video demo can be found below:
+
+[Demo Video](https://www.youtube.com/watch?v=DH3MEpBtFzE "IEC for Fractal Art")
+
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/DH3MEpBtFzE/0.jpg)](http://www.youtube.com/watch?v=DH3MEpBtFzE)
 
 

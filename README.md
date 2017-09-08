@@ -14,4 +14,6 @@ The fractal arts they create can also be exported as image.
 
 The project was written using MFC in VS 2005 with SDL 1.2 and Allegro. There is an embedded compiler than automatically converts the generated linear genetic program into executable.
 
+The binary executable built from the project can be found in the 
+
 

@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<LGPProgram input_count="2" output_count="3">
+    <parameters>
+        <param name="height" value="300" />
+        <param name="width" value="400" />
+    </parameters>
+    <constant_segment constant_count="9">
+        <constant index="0" value="3.141593" />
+        <constant index="1" value="1.000000" />
+        <constant index="2" value="3.000000" />
+        <constant index="3" value="4.000000" />
+        <constant index="4" value="5.000000" />
+        <constant index="5" value="2.718282" />
+        <constant index="6" value="7.000000" />
+        <constant index="7" value="8.000000" />
+        <constant index="8" value="9.000000" />
+    </constant_segment>
+    <register_segment register_count="6">
+        <register index="0" input_alias_index="0" default_value="1.000000" />
+        <register index="1" input_alias_index="1" default_value="1.000000" />
+        <register index="2" input_alias_index="0" default_value="1.000000" />
+        <register index="3" input_alias_index="1" default_value="1.000000" />
+        <register index="4" input_alias_index="0" default_value="1.000000" />
+        <register index="5" input_alias_index="1" default_value="1.000000" />
+    </register_segment>
+    <code_segment>
+        <instruction line="0">
+            <op type="julia5" register_index="13" method_name="julia5" condictional_construct="false" />
+            <operand_one register_index="4" type="register" />
+            <operand_two register_index="4" type="register" />
+            <destination_register register_index="4" type="register" />
+        </instruction>
+        <instruction line="1">
+            <op type="+" register_index="0" method_name="lgp_plus" condictional_construct="false" />
+            <operand_one register_index="2" type="register" />
+            <operand_two register_index="3" type="register" />
+            <destination_register register_index="0" type="register" />
+        </instruction>
+        <instruction line="2">
+            <op type="julia3" register_index="12" method_name="julia3" condictional_construct="false" />
+            <operand_one register_index="8" type="constant" />
+            <operand_two register_index="1" type="register" />
+            <destination_register register_index="1" type="register" />
+        </instruction>
+        <instruction line="3">
+            <op type="cos" register_index="5" method_name="lgp_cos" condictional_construct="false" />
+            <operand_one register_index="0" type="register" />
+            <operand_two register_index="4" type="register" />
+            <destination_register register_index="0" type="register" />
+        </instruction>
+        <instruction line="4">
+            <op type="-" register_index="1" method_name="lgp_minus" condictional_construct="false" />
+            <operand_one register_index="0" type="constant" />
+            <operand_two register_index="1" type="register" />
+            <destination_register register_index="3" type="register" />
+        </instruction>
+        <instruction line="5">
+            <op type="mandel2" register_index="9" method_name="mandel2" condictional_construct="false" />
+            <operand_one register_index="0" type="constant" />
+            <operand_two register_index="3" type="register" />
+            <destination_register register_index="2" type="register" />
+        </instruction>
+        <instruction line="6">
+            <op type="cos" register_index="5" method_name="lgp_cos" condictional_construct="false" />
+            <operand_one register_index="1" type="constant" />
+            <operand_two register_index="1" type="register" />
+            <destination_register register_index="5" type="register" />
+        </instruction>
+        <instruction line="7">
+            <op type="ln" register_index="8" method_name="lgp_ln" condictional_construct="false" />
+            <operand_one register_index="0" type="constant" />
+            <operand_two register_index="1" type="register" />
+            <destination_register register_index="4" type="register" />
+        </instruction>
+        <instruction line="8">
+            <op type="julia3" register_index="12" method_name="julia3" condictional_construct="false" />
+            <operand_one register_index="0" type="constant" />
+            <operand_two register_index="4" type="register" />
+            <destination_register register_index="1" type="register" />
+        </instruction>
+        <instruction line="9">
+            <op type="If&lt;" register_index="14" method_name="if_less_than" condictional_construct="true" />
+            <operand_one register_index="4" type="register" />
+            <operand_two register_index="5" type="constant" />
+            <destination_register register_index="2" type="register" />
+        </instruction>
+        <instruction line="10">
+            <op type="-" register_index="1" method_name="lgp_minus" condictional_construct="false" />
+            <operand_one register_index="2" type="register" />
+            <operand_two register_index="2" type="register" />
+            <destination_register register_index="4" type="register" />
+        </instruction>
+    </code_segment>
+</LGPProgram>

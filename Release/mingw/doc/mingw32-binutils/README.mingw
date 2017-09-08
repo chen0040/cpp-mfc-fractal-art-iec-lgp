@@ -1,0 +1,15 @@
+This version of binutils was compiled from the vanila 2.19 sources.  It was 
+compiled with the following options:
+
+../binutils-2.19/configure \
+  --prefix=/mingw/ \
+  --build=mingw32 \
+  --host=mingw32 \
+  --target=mingw32 \
+  --with-gcc \
+  --with-gnu-as \
+  --with-gnu-ld \
+  --disable-nls
+make CFLAGS="-s -O2 -mms-bitfields -mtune=i686"
+for i in `find . -type f -iname dir`; do rm $i; done
+make prefix=`cd ../dist;pwd` install

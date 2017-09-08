@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<compiler>
+<param name="output" value="lgp_program.exe" />
+<param name="configuration" value="-O3 -Wall" />
+<param name="include_relative" value="SDL-1.2.13\include" />
+<param name="cflags" value="-D_GNU_SOURCE=1 -Dmain=SDL_main" />
+<param name="lib_relative" value="SDL-1.2.13\lib" />
+<param name="libs" value="-lmingw32 -lSDLmain -lSDL  -mwindows" />
+</compiler>

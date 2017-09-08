@@ -1,0 +1,3 @@
+An error has occurred in the LGP System...
+Source: LGPProgram::CreateFromScript(std::string script_name)
+Error: Failed to load 27773.lgp

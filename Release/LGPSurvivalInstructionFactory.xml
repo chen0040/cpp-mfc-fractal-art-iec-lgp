@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<survival_instruction strategy="probablistic" >
+
+<strategy name="probablistic" >
+<param name="reproduction_probability" value="0.5" />
+</strategy>
+
+<strategy name="compete" >
+</strategy>
+
+</survival_instruction>

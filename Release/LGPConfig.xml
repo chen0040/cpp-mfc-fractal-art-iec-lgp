@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+
+<configuration>
+<parameters>
+<param name="NumRegisters" value="6" /> <!--6-->
+<param name="PopulationSize" value="20" />
+<param name="Epsilon" value="0.000000001" />
+<param name="MaxGenerations" value="1000" />
+<param name="Maximization" value="true" />
+<param name="CrossoverRate" value="0.1" />
+<param name="MacroMutationRate" value="0.75" />
+<param name="MicroMutationRate" value="0.25" />
+</parameters>
+
+<log_parameters>
+<param name="PopLogInterval" value="50" />
+<param name="PopLogFilePath" value="pop_log" />
+<param name="StatsLogFilePath" value="stats_log" />
+<param name="RunLogFilePath" value="run_log" />
+</log_parameters>
+
+<micro_mutation>
+<mutation_type_probability register_mutation="0.5" operator_mutation="0.5" constant_mutation="0.5" />
+<constant_mutation standard_deviation="1" />
+</micro_mutation>
+
+<constant_reg>
+<constant value="3.1415926" weight="10" />
+<constant value="1" weight="1" />
+<constant value="3" weight="1" />
+<constant value="4" weight="1" />
+<constant value="5" weight="1" />
+<constant value="2.71828183" weight="5" />
+<constant value="7" weight="1" />
+<constant value="8" weight="1" />
+<constant value="9" weight="1" />
+</constant_reg>
+
+<evolution strategy="generational">
+<strategy name="steady_state" elites="0" />
+<strategy name="generational" elites="2" />
+</evolution>
+
+<lgp_scripts>
+<script name="LGPCrossoverInstructionFactory" src="LGPCrossoverInstructionFactory.xml" />
+<script name="LGPMutationInstructionFactory" src="LGPMutationInstructionFactory.xml" />
+<script name="LGPPopInitInstructionFactory" src="LGPPopInitInstructionFactory.xml" />
+<script name="LGPRegInitInstructionFactory" src="LGPRegInitInstructionFactory.xml" />
+<script name="LGPReproductionSelectionInstructionFactory" src="LGPReproductionSelectionInstructionFactory.xml" />
+<script name="LGPSurvivalInstructionFactory" src="LGPSurvivalInstructionFactory.xml" />
+</lgp_scripts>
+
+</configuration>
